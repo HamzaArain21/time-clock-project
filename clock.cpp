@@ -1,28 +1,26 @@
 #include<iostream>
 #include<windows.h>
-
 using namespace std;
-
 int main()
 {
 	//data types
-	int h,m,s,a,r;
+	int hour,min,sec,a,r;
 	
 	r=a=0;
 	//condition
 	
 	while(r==0)
 	{
-		cout<<"Enter  hour"<<endl;
-		cin>>h;
+		cout<<"Enter the hour"<<endl;
+		cin>>hour;
 		
-		cout<<"Enter min"<<endl;
-		cin>>m;
+		cout<<"Enter the miniutes"<<endl;
+		cin>>min;
 		
-		cout<<"Enter seconds"<<endl;
-		cin>>s;
+		cout<<"Enter the seconds"<<endl;
+		cin>>sec;
 		
-		if(h<=24 && m<60 &&s<60)
+		if(hour<=24 && min<60 &&sec<60)
 		{
 			r++;
 		}
@@ -31,36 +29,33 @@ int main()
 			system("cls");
 		}
 	}
-	
 	while(a==0)
 	{
 		system("cls");
-		if(h>=12)
+		if(hour>=12)
 		{
-			cout<<h<<":"<<m<<":"<<s<<"  pm"<<endl;
+			cout<<hour<<":"<<min<<":"<<sec<<"  pm"<<endl;
 		}
 		else
 		{
-			cout<<h<<":"<<m<<":"<<s<<"  am"<<endl;
+			cout<<hour<<":"<<min<<":"<<sec<<"  am"<<endl;
 		}
 		Sleep(1000);
-		s++;
-		if(s>59)
+		sec++;
+		if(sec>59)
 		{
-			s=0;
-			m++;
+			sec=0;
+			min++;
 		}
-		if(m>59)
+		if(min>59)
 		{
-			m=0;
-			h++;
+			min=0;
+			hour++;
 		}
-		if(h>24)
+		if(hour>24)
 		{
-			h=0;
-		}
-		
+			hour=0;
+		}		
 	}
 	return 0;
 }
-
